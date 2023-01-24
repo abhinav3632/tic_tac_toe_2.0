@@ -1,0 +1,98 @@
+@import url(https://fonts.googleapis.com/css?family=Walter+Turncoat);
+*{
+    margin: 0;
+    padding: 0;      
+}
+body{
+    height: 100vh;
+    background: url('./chalkboard1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Walter Turncoat", cursive;
+}
+.gameContainer{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+}
+.box{
+    border: 3px solid white;
+    font-size: 6rem;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:first-child,
+.box:nth-child(2),
+.box:nth-child(3){
+    border-top: none;
+}
+
+.box:nth-child(3n+1){
+    border-left: none;
+}
+
+.box:nth-child(3n+3){
+    border-right: none;
+}
+.box:last-child,
+.box:nth-child(8),
+.box:nth-child(7){
+    border-bottom: none;
+} 
+
+.restartButton{
+    display: block;
+    margin: 1.5rem auto;
+    padding: 1rem;
+    border-radius: 4px;
+    border: none;
+    background-color: #17b73a;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 700;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+/* under-testing */
+.popup {
+    background: rgba(0, 0, 0, 0.9);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+    font-size: 7rem;
+  }
+  #new-game {
+    font-size: 2rem;
+    padding: 0.5em 1em;
+    background-color: #17b73a;
+    color: #ffffff;
+    border-radius: 0.2em;
+    border: none;
+  }
+  #message {
+    color: #ffffff;
+    text-align: center;
+    font-size: 5rem;
+    -webkit-text-stroke: 1px #0a0027;
+  }
+  .popup.hide {
+    display: none;
+  }
+  
