@@ -27,8 +27,10 @@ body{
     font-size: 10vw;
     cursor: pointer;
     color: white;
+    background: transparent;
     font-weight: 700;
     display: flex;
+    font-family: "Walter Turncoat", cursive;
     justify-content: center;
     align-items: center;
 }
